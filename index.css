@@ -121,3 +121,23 @@ body {
         margin-top: 10px;
     }
 }
+@media (orientation: portrait){
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-weight: normal;
+    font-size: 25px;
+}
+ .Searchcontainer{
+    font-size: 20px;
+    display: flex;
+    flex-flow: row wrap;
+    background-color: var(--text_light);
+    justify-content: center;
+    width: 70%;
+    height: 30vh;
+    border-radius: 20px;
+    padding: 20px;
+ }   
+}
