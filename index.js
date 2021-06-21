@@ -14,6 +14,8 @@ function Submit(){
 
 				const {cod,coord,main,sys,visibility,weather,wind,name} = data;
 				if(cod<300){
+					var img = document.createElement("IMG");
+						img.setAttribute("src","http://openweathermap.org/img/w/"+weather[0].icon+".png");
 					var ul = document.createElement("UL");
 					ul.setAttribute("id","cities");
 					document.querySelector(".container").appendChild(ul);
@@ -26,11 +28,9 @@ function Submit(){
 					ElementAddition(cities,"Visibility: "+visibility+" m");
 					ElementAddition(cities,"Weather: "+weather[0].description);
 					ElementAddition(cities,"Temprature: "+main.temp+" °C");
-					var img = document.createElement("img");
-					img.src = weather[0].icon;
-					ElementAddition(cities,"Wind speed: "+wind.speed + " Km/hr")
-					// var li = document.appendChild(img);
-					// cities.appendChild(li);
+					ElementAddition(cities,"Wind speed: "+wind.speed + " Km/hr");
+					img.setAttribute("width","30%")
+					cities.appendChild(img);
 					document.querySelector(":root").style.setProperty("--pad","20px")
 				}else{
 					const {message} = data
