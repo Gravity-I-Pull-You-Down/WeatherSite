@@ -22,7 +22,8 @@ function Submit(){
 					ElementAddition(cities,"Longitude: "+coord.lon);
 					ElementAddition(cities,"Latitude: "+coord.lat);
 					ElementAddition(cities,"Visibility: "+visibility+" m");
-					ElementAddition(cities,weather[0].description);
+					ElementAddition(cities,"Weather: "+weather[0].description);
+					ElementAddition(cities,"Temprature: "+main.temp+" °C");
 					var img = document.createElement("img");
 					img.src = weather[0].icon;
 					ElementAddition(cities,"Wind speed: "+wind.speed + " Km/hr")
