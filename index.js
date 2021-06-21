@@ -4,12 +4,14 @@ function Submit(){
 	const form=document.querySelector("form");
 	const button = document.querySelector("button");
 	var CityName = document.querySelector("input").value;
+	var inp = document.querySelector("input").value ="";
 	if(RepeatCheck(CityName)){
 		const URL = "https://api.openweathermap.org/data/2.5/weather?q="+ CityName +"&appid=bceac68d9c29812ea33b91dbeeb4799d&units=metric";
 		fetch(URL)
 		.then(response => response.json())
 		.then(data => 
 			{	console.log(data)
+
 				const {cod,coord,main,sys,visibility,weather,wind,name} = data;
 				if(cod<300){
 					var ul = document.createElement("UL");
