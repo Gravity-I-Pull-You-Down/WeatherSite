@@ -22,7 +22,6 @@ button, input {
     color: inherit;
 }
 input {
-
     border-bottom-left-radius: 4px;
     border-bottom: 1px solid black;
     border-left: 1px solid black;
@@ -121,23 +120,27 @@ body {
         margin-top: 10px;
     }
 }
-@media (orientation: portrait){
+@media (orientation: portrait) {
     * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-weight: normal;
-    font-size: 25px;
-}
- .Searchcontainer{
-    font-size: 20px;
-    display: flex;
-    flex-flow: row wrap;
-    background-color: var(--text_light);
-    justify-content: center;
-    width: 70%;
-    height: 30vh;
-    border-radius: 20px;
-    padding: 20px;
- }   
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-weight: normal;
+        font-size: 25px;
+    }
+    .heading {
+        color: var(--text_med);
+        font-size: 50px;
+    }
+    .Searchcontainer {
+        font-size: 20px;
+        display: flex;
+        flex-flow: row wrap;
+        background-color: var(--text_light);
+        justify-content: center;
+        width: 70%;
+        height: 30vh;
+        border-radius: 20px;
+        padding: 20px;
+    }
 }
