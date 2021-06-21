@@ -9,7 +9,7 @@ function Submit(){
 		fetch(URL)
 		.then(response => response.json())
 		.then(data => 
-			{
+			{	console.log(data)
 				const {cod,coord,main,sys,visibility,weather,wind,name} = data;
 				if(cod<300){
 					var ul = document.createElement("UL");
@@ -22,7 +22,7 @@ function Submit(){
 					ElementAddition(cities,"Longitude: "+coord.lon);
 					ElementAddition(cities,"Latitude: "+coord.lat);
 					ElementAddition(cities,"Visibility: "+visibility+" m");
-					ElementAddition(cities,weather[0].main);
+					ElementAddition(cities,weather[0].description);
 					var img = document.createElement("img");
 					img.src = weather[0].icon;
 					ElementAddition(cities,"Wind speed: "+wind.speed + " Km/hr")
